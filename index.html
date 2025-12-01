@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mahyo — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <a class="logo" href="index.html">Mahyo</a>
+        <nav class="nav-menu" aria-label="Main navigation">
+          <a class="nav-item" href="index.html">Beranda</a>
+          <a class="nav-item" href="genre.html">Kategori</a>
+          <a class="nav-item" href="#">Penulis</a>
+          <a class="nav-item" href="#">Koleksi</a>
+          <a class="nav-item" href="#">Tentang</a>
+        </nav>
+      </div>
+
+      <div class="nav-center">
+        <div class="header-search">
+          <span class="search-icon"></span>
+          <input type="search" class="search-input" placeholder="Cari cerita..." aria-label="Cari cerita">
+        </div>
+        <button class="search-toggle" aria-label="Open search" title="Cari">🔍</button>
+      </div>
+
+      <div class="nav-right">
+        <button class="icon-btn notification-btn" aria-label="Notifikasi">
+          🔔
+          <span class="badge" aria-hidden="true"></span>
+        </button>
+        <div class="user-profile-menu">
+          <button class="user-avatar" aria-label="User menu"><img src="https://picsum.photos/seed/avatar/64/64" alt="avatar" width="32" height="32"></button>
+          <div class="dropdown-menu">
+            <a href="#">Profil</a>
+            <a href="#">Koleksi</a>
+            <a href="#">Pengaturan</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 class="title">Where stories live</h1>
+          <p class="subtitle">Discover millions of stories from writers around the world.</p>
+          <div class="hero-cta">
+            <a href="#popular" class="btn btn-primary">Discover Stories</a>
+            <a href="#" class="btn btn-ghost">Write</a>
+          </div>
+          </div>
+          <!-- Right-side hero slider: injected covers -->
+          <aside class="hero-slider" id="hero-slider" aria-label="Novel previews">
+            <!-- injected by Components.renderHeroSlider -->
+          </aside>
+        </div>
+
+      </section>
+
+    <section id="explore" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Explore</h2>
+          <p class="muted">A curated grid of stories — find something you love</p>
+        </div>
+
+        <div id="explore-grid" class="explore-grid">
+          <!-- Static grid of many story cards rendered by components.js -->
+        </div>
+      </div>
+    </section>
+
+    <section id="popular" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Popular Stories</h2>
+          <p class="muted">Stories trending now</p>
+        </div>
+
+        <div class="search-row">
+          <input id="search-input" type="search" placeholder="Search by title, author, or genre" aria-label="Search stories">
+        </div>
+
+        <div class="carousel-wrap">
+          <button class="carousel-btn left" aria-label="Scroll left">◀</button>
+          <div id="stories-carousel" class="carousel" data-carousel>
+            <!-- Stories will be rendered here by components.js -->
+          </div>
+          <button class="carousel-btn right" aria-label="Scroll right">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="genres" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Genres</h2>
+          <p class="muted">Explore by category</p>
+        </div>
+        <div class="genres-grid">
+          <a class="genre" href="#">Romance</a>
+          <a class="genre" href="#">Fantasy</a>
+          <a class="genre" href="#">Horror</a>
+          <a class="genre" href="#">Mystery</a>
+          <a class="genre" href="#">Sci-Fi</a>
+          <a class="genre" href="#">Slice of Life</a>
+          <a class="genre" href="#">Comics</a>
+          <a class="genre" href="#">Fanfiction</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="all-stories" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>All Stories</h2>
+          <p class="muted">Browse the library</p>
+        </div>
+
+        <div id="all-stories-grid" class="stories-grid">
+          <!-- Story tiles rendered by components.js -->
+        </div>
+
+        <div style="text-align:center;margin-top:1rem">
+          <button id="load-more-btn" class="btn btn-ghost">Muat Lebih Banyak</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Mahyo — Built for stories. All rights reserved.</p>
+      <nav class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Help</a>
+        <a href="#">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+  <!-- Modal for story detail (opened via JS) -->
+  <div id="story-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <div id="modal-story-detail" class="modal-body">
+        <!-- Story detail injected here -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>

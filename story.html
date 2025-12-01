@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Story — Mahyo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <a class="logo" href="index.html">Mahyo</a>
+        <nav class="nav-menu" aria-label="Main navigation">
+          <a class="nav-item" href="index.html">Beranda</a>
+          <a class="nav-item" href="genre.html">Kategori</a>
+          <a class="nav-item" href="#">Penulis</a>
+          <a class="nav-item" href="#">Koleksi</a>
+          <a class="nav-item" href="#">Tentang</a>
+        </nav>
+      </div>
+
+      <div class="nav-center">
+        <div class="header-search">
+          <span class="search-icon">🔍</span>
+          <input type="search" class="search-input" placeholder="Cari cerita..." aria-label="Cari cerita">
+        </div>
+        <button class="search-toggle" aria-label="Open search" title="Cari">🔍</button>
+      </div>
+
+      <div class="nav-right">
+        <button class="icon-btn notification-btn" aria-label="Notifikasi">
+          🔔
+          <span class="badge" aria-hidden="true"></span>
+        </button>
+        <div class="user-profile-menu">
+          <button class="user-avatar" aria-label="User menu"><img src="https://picsum.photos/seed/avatar/64/64" alt="avatar" width="32" height="32"></button>
+          <div class="dropdown-menu">
+            <a href="#">Profil</a>
+            <a href="#">Koleksi</a>
+            <a href="#">Pengaturan</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div id="story-detail">
+          <!-- Story detail rendered by components.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Mahyo</p>
+      <nav class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Help</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
